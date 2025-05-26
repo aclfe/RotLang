@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/rotl.dir/link.d CMakeFiles/rotl.dir/src/main.cpp.o -o rotl

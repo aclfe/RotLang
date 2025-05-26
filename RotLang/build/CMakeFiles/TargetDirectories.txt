@@ -1,0 +1,3 @@
+/home/kairav/Desktop/Projects/CookedCat/RotLang/build/CMakeFiles/rotl.dir
+/home/kairav/Desktop/Projects/CookedCat/RotLang/build/CMakeFiles/edit_cache.dir
+/home/kairav/Desktop/Projects/CookedCat/RotLang/build/CMakeFiles/rebuild_cache.dir
