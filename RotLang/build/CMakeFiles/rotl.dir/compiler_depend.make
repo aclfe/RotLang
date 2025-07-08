@@ -24,6 +24,7 @@ CMakeFiles/rotl.dir/src/main.cpp.o: /home/kairav/Desktop/Projects/CookedCat/RotL
   /usr/include/c++/14/bits/cpp_type_traits.h \
   /usr/include/c++/14/bits/cxxabi_forced.h \
   /usr/include/c++/14/bits/cxxabi_init_exception.h \
+  /usr/include/c++/14/bits/enable_special_members.h \
   /usr/include/c++/14/bits/exception.h \
   /usr/include/c++/14/bits/exception_defines.h \
   /usr/include/c++/14/bits/exception_ptr.h \
@@ -60,12 +61,15 @@ CMakeFiles/rotl.dir/src/main.cpp.o: /home/kairav/Desktop/Projects/CookedCat/RotL
   /usr/include/c++/14/bits/sstream.tcc \
   /usr/include/c++/14/bits/std_abs.h \
   /usr/include/c++/14/bits/stl_algobase.h \
+  /usr/include/c++/14/bits/stl_bvector.h \
   /usr/include/c++/14/bits/stl_construct.h \
   /usr/include/c++/14/bits/stl_function.h \
   /usr/include/c++/14/bits/stl_iterator.h \
   /usr/include/c++/14/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/14/bits/stl_iterator_base_types.h \
   /usr/include/c++/14/bits/stl_pair.h \
+  /usr/include/c++/14/bits/stl_uninitialized.h \
+  /usr/include/c++/14/bits/stl_vector.h \
   /usr/include/c++/14/bits/streambuf.tcc \
   /usr/include/c++/14/bits/streambuf_iterator.h \
   /usr/include/c++/14/bits/string_view.tcc \
@@ -73,6 +77,7 @@ CMakeFiles/rotl.dir/src/main.cpp.o: /home/kairav/Desktop/Projects/CookedCat/RotL
   /usr/include/c++/14/bits/uses_allocator.h \
   /usr/include/c++/14/bits/uses_allocator_args.h \
   /usr/include/c++/14/bits/utility.h \
+  /usr/include/c++/14/bits/vector.tcc \
   /usr/include/c++/14/bits/version.h \
   /usr/include/c++/14/cctype \
   /usr/include/c++/14/cerrno \
@@ -100,6 +105,7 @@ CMakeFiles/rotl.dir/src/main.cpp.o: /home/kairav/Desktop/Projects/CookedCat/RotL
   /usr/include/c++/14/istream \
   /usr/include/c++/14/new \
   /usr/include/c++/14/numbers \
+  /usr/include/c++/14/optional \
   /usr/include/c++/14/ostream \
   /usr/include/c++/14/pstl/pstl_config.h \
   /usr/include/c++/14/sstream \
@@ -111,6 +117,7 @@ CMakeFiles/rotl.dir/src/main.cpp.o: /home/kairav/Desktop/Projects/CookedCat/RotL
   /usr/include/c++/14/tuple \
   /usr/include/c++/14/type_traits \
   /usr/include/c++/14/typeinfo \
+  /usr/include/c++/14/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -363,10 +370,6 @@ rotl: /lib/x86_64-linux-gnu/libc.so.6 \
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-
-/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
-
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
@@ -374,6 +377,14 @@ rotl: /lib/x86_64-linux-gnu/libc.so.6 \
 /usr/include/wctype.h:
 
 /usr/include/wchar.h:
+
+/usr/include/time.h:
+
+/usr/include/sched.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
+
+/usr/include/locale.h:
 
 /usr/include/c++/14/bits/refwrap.h:
 
@@ -385,10 +396,6 @@ rotl: /lib/x86_64-linux-gnu/libc.so.6 \
 
 /usr/include/c++/14/bits/range_access.h:
 
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
-
-/usr/include/locale.h:
-
 /usr/include/c++/14/bits/memoryfwd.h:
 
 /usr/include/c++/14/bits/ranges_base.h:
@@ -398,6 +405,10 @@ rotl: /lib/x86_64-linux-gnu/libc.so.6 \
 /usr/include/c++/14/bits/ostream.tcc:
 
 /home/kairav/Desktop/Projects/CookedCat/RotLang/src/main.cpp:
+
+/usr/include/stdio.h:
+
+/usr/include/c++/14/bits/locale_facets.tcc:
 
 /usr/include/c++/14/bits/exception_ptr.h:
 
@@ -425,6 +436,10 @@ CMakeFiles/rotl.dir/src/main.cpp.o:
 
 /usr/include/c++/14/bits/utility.h:
 
+/usr/include/stdlib.h:
+
+/usr/include/c++/14/istream:
+
 /usr/lib/x86_64-linux-gnu/libc_nonshared.a:
 
 /usr/include/c++/14/bits/invoke.h:
@@ -436,6 +451,10 @@ CMakeFiles/rotl.dir/src/main.cpp.o:
 /usr/lib/linux/uapi/x86/asm/types.h:
 
 /usr/include/c++/14/bits/allocator.h:
+
+/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
+
+/usr/include/c++/14/vector:
 
 /usr/include/c++/14/backward/binders.h:
 
@@ -468,10 +487,6 @@ CMakeFiles/rotl.dir/src/main.cpp.o:
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/c++/14/bits/ptr_traits.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
-
-/usr/include/c++/14/numbers:
 
 /usr/include/features.h:
 
@@ -517,25 +532,33 @@ CMakeFiles/rotl.dir/src/main.cpp.o:
 
 /usr/include/c++/14/ext/atomicity.h:
 
+/usr/include/c++/14/bits/enable_special_members.h:
+
+/usr/include/c++/14/bits/vector.tcc:
+
+/usr/include/c++/14/bits/fstream.tcc:
+
+/usr/include/c++/14/typeinfo:
+
 /usr/include/c++/14/cctype:
 
 /usr/include/c++/14/bits/exception.h:
 
 /usr/include/c++/14/concepts:
 
-/usr/include/c++/14/bits/fstream.tcc:
-
-/usr/include/c++/14/typeinfo:
-
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
 /usr/include/c++/14/bits/exception_defines.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
+
+/usr/include/c++/14/numbers:
+
 /usr/include/asm-generic/errno-base.h:
 
-/usr/include/c++/14/bits/stl_algobase.h:
-
 /usr/include/asm-generic/types.h:
+
+/usr/include/c++/14/bits/stl_algobase.h:
 
 /usr/include/c++/14/bits/stl_iterator.h:
 
@@ -565,9 +588,9 @@ CMakeFiles/rotl.dir/src/main.cpp.o:
 
 /usr/include/c++/14/bits/stl_pair.h:
 
-/usr/include/c++/14/bits/locale_facets.tcc:
+/usr/include/c++/14/bits/stl_bvector.h:
 
-/usr/include/stdio.h:
+/usr/include/c++/14/bits/stl_vector.h:
 
 /usr/include/c++/14/bits/streambuf_iterator.h:
 
@@ -606,6 +629,12 @@ CMakeFiles/rotl.dir/src/main.cpp.o:
 /usr/include/c++/14/debug/assertions.h:
 
 /usr/include/c++/14/ext/alloc_traits.h:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/usr/include/c++/14/bits/stl_uninitialized.h:
+
+/usr/include/c++/14/optional:
 
 /usr/include/c++/14/ext/string_conversions.h:
 
@@ -688,11 +717,3 @@ CMakeFiles/rotl.dir/src/main.cpp.o:
 /usr/include/c++/14/new:
 
 /usr/include/linux/stddef.h:
-
-/usr/include/sched.h:
-
-/usr/include/c++/14/istream:
-
-/usr/include/stdlib.h:
-
-/usr/include/time.h:
