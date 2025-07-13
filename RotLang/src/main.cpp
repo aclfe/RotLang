@@ -1,78 +1,14 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include <optional>
-#include <vector>
-#include <string>
+
+#include "headers/tokenization.hpp"
 
 
-enum class TokenType{
-    _return,
-    int_litearl,
-    semicol,
-};
-
-struct Token{
-    TokenType type;
-    std::optional<std::string> value {};
-};
 
 std::vector<Token> tokenize(const std::string& str){
 
-    std::vector<Token> tokens;
-
-    std::string buf;
-
-    for(int i = 0; i < str.length(); i++)
-    {
-        char c = str.at(i);
-        if(std::isalpha(c))
-        {
-            buf.push_back(c);
-            i++;
-            while(std::isalnum(str.at(i)))
-            {
-                buf.push_back(str.at(i));
-                i++;
-            }
-            i--;
-
-            if(buf == "return"){
-                tokens.push_back({.type = TokenType::_return});
-                buf.clear();
-                continue;
-            }
-            else{
-                std::cerr << "No valid synatax loser" << std::endl;
-                exit(EXIT_FAILURE);
-            }
-        }
-        else if(std::isdigit(c))
-        {
-            buf.push_back(c);
-            i++;
-            while(std::isdigit(str.at(i))){
-                buf.push_back(str.at(i));
-                i++;
-            }
-            i--;
-            tokens.push_back({.type = TokenType::int_litearl, .value = buf});
-            buf.clear();
-        }
-        else if(c == ';'){
-            tokens.push_back({.type = TokenType::semicol});
-        }
-        else if(std::isspace(c))
-        {
-            continue;
-        }
-        else{
-            std::cerr << "Everything went wrong" << std::endl;
-            exit(EXIT_FAILURE);
-        }
-    }
-
-    return tokens;
+    
 }
 
 std::string tokens_to_asm(const std::vector<Token>& tokens)
@@ -83,7 +19,7 @@ std::string tokens_to_asm(const std::vector<Token>& tokens)
     { 
         const Token& token = tokens.at(i);
 
-        if(token.type == TokenType::_return)
+        if(token.type == TokenType::_exit)
         {
             if(i+1 < tokens.size() && tokens.at(i + 1).type == TokenType::int_litearl)
             {
@@ -123,7 +59,18 @@ int main(int argc, char* argv[]) {
     file.close();
 
     std::vector<Token> thing = tokenize(contents);
-    std::cout << tokens_to_asm(thing) << std::endl;
+
+    {
+    std::fstream filed("out.asm", std::ios::out);
+    filed << tokens_to_asm(thing);
+    filed.close();
+    
+    }
+
+    system("nasm -felf64 out.asm");
+    system("ld -o out out.o");
+    // system("./out");
+    // system("echo $?");
 
     //std::cout << argv[1] << std::endl;
     return 0;

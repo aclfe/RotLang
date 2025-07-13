@@ -1,2 +1,2 @@
-# RotLang
-![Demo](https://github.com/aclfe/RotLang/blob/main/RotLangDemoGif.gif)
+# CookedCat
+Different programming languages, RotLang and MeowLang . 
